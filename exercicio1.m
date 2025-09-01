@@ -16,7 +16,7 @@ for j = 1:length(t)-1
       break
     endif
   endif
-  t(j+1) = t(j)-(func(t(j))/func_d(t(j))));
+  t(j+1) = t(j)-(func(t(j))/func_d(t(j)));
 end for
 t=t(j+1)
 
