@@ -1,4 +1,4 @@
-function t = exercicio1(func, func_d,x0)
+function t = exercicio1(func,func_d,x0)
 
 % nao alterar: inicio
 es = 0.01;
@@ -9,9 +9,11 @@ imax = 20;
 
 t = zeros(imax, 1);
 t(1)= x0;
+erro = zeros(length(t), 1);
+
 for j = 1:length(t)-1
   if j ~= 1
-    erro(j)=abs((t(j)-t(j-1))/t(j))
+    erro(j)=abs((t(j)-t(j-1))/t(j));
     if erro(j)<es
       break
     endif
