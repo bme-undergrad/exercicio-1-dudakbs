@@ -13,14 +13,14 @@ erro = zeros(length(t), 1);
 
 for j = 1:length(t)-1
   if j ~= 1
-    erro(j)=abs((t(j)-t(j-1))/t(j));
+    erro(j) = abs((t(j) - t(j-1)) / max(1, abs(t(j))));
     if erro(j)<es
       break
     endif
   endif
   t(j+1) = t(j)-(func(t(j))/func_d(t(j)));
 end for
-t = t(j)
+t = t(1:j)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
