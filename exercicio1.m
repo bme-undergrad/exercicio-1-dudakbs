@@ -20,7 +20,7 @@ for j = 1:length(t)-1
   endif
   x(j+1) = x(j)-(func(x(j))/func_d(x(j)));
 endfor
-t = t(j+1)
+t = x(j+1)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
