@@ -8,17 +8,17 @@ imax = 20;
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
 t = zeros(imax, 1);
-t(1)= x0;
+x(1)= x0;
 erro = zeros(length(t), 1);
 
 for j = 1:length(t)-1
   if j ~= 1
-    erro(j)=abs((t(j)-t(j-1))/t(j));
+    erro(j)=abs((x(j)-x(j-1))/x(j));
     if erro(j)<es
       break
     endif
   endif
-  t(j+1) = t(j)-(func(t(j))/func_d(t(j)));
+  x(j+1) = x(j)-(func(x(j))/func_d(x(j)));
 endfor
 t = t(j+1)
 
